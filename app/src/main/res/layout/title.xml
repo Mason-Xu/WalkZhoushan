@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:orientation="horizontal"
+    android:background="@color/colorPrimaryDark">
+
+    <Button
+        android:id="@+id/title_button_back"
+        android:layout_width="14.08dp"
+        android:layout_height="24dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/title_back" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="36dp"
+        android:background="@color/colorPrimary"
+        android:layout_margin="10dp"/>
+
+</LinearLayout>

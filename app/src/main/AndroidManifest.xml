@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.walkzhoushan">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Test"
+            android:label="@string/app_name_ch"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- <activity android:name=".WelcomeActivity" /> -->
+        <!--<activity android:name=".StartPageActivity" />-->
+        <!--<activity android:name=".Bottombartest" />-->
+        <activity android:name=".Mine_Friend" />
+        <activity android:name=".NoDevelop" />
+        <activity android:name=".AccountSetting" />
+        <activity android:name=".Setting" />
+        <activity android:name=".MyOrder" />
+
+        <!-- register point activity -->
+        <activity android:name=".PointActivity" />
+        <activity
+            android:name=".PointPageActivity"
+            android:label="景点" />
+
+        <!-- register travelnote activity -->
+        <activity android:name=".TravelNoteActivity" />
+        <activity
+            android:name=".TravelNotePageActivity"
+            android:label="游记" />
+
+
+        <activity
+            android:name=".ScrollingActivity"
+            android:label="旅游须知" />
+        <!--<activity-->
+            <!--android:namLoginActivityMaterialDesignvity"-->
+            <!--android:label="@string/title_activity_login"></activity>-->
+
+
+        <!--MinePage Activity Register-->
+
+        <!--<activity android:name=".LoginActivity"/>-->
+        <activity android:name=".RegisterActivity"/>
+        <activity android:name=".ForgetActivity"/>
+
+        <activity android:name=".Mine_Coupon_Activity"/>
+        <activity android:name=".MyInfomationActivity"/>
+
+        <!--message register-->
+        <activity android:name=".MsgActivity"/>
+
+
+        <activity android:name=".Add_travelnote"/>
+    </application>
+
+</manifest>
