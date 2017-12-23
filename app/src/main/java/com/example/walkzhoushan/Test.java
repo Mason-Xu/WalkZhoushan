@@ -11,7 +11,7 @@ public class Test extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.travelnote_scroll);
+        setContentView(R.layout.add_travelnote1);
 
     }
 }
