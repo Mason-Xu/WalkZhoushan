@@ -18,12 +18,12 @@ import java.util.List;
  * Created by Mason on 2017/12/19.
  */
 
-public class TravelNoteAdapter extends RecyclerView.Adapter<TravelNoteAdapter.ViewHolder>{
-    private static final String TAG = "TravelNoteAdapter";
+public class RM_TravelNoteAdapter extends RecyclerView.Adapter<RM_TravelNoteAdapter.ViewHolder>{
+    private static final String TAG = "RM_TravelNoteAdapter";
 
     private Context mContext;
 
-    private List<TravelNote> mTravelNoteList;
+    private List<RM_TravelNote> mTravelNoteList;
 
     static class ViewHolder extends RecyclerView.ViewHolder {
         CardView cardView;
@@ -38,25 +38,25 @@ public class TravelNoteAdapter extends RecyclerView.Adapter<TravelNoteAdapter.Vi
         }
     }
 
-    public TravelNoteAdapter(List<TravelNote> travelNoteList) {
+    public RM_TravelNoteAdapter(List<RM_TravelNote> travelNoteList) {
         mTravelNoteList = travelNoteList;
     }
 
     @Override
-    public TravelNoteAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public RM_TravelNoteAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         if (mContext == null) {
             mContext = parent.getContext();
         }
         View view = LayoutInflater.from(mContext).inflate(R.layout.travelnote_item, parent, false);
-        final TravelNoteAdapter.ViewHolder holder = new TravelNoteAdapter.ViewHolder(view);
+        final RM_TravelNoteAdapter.ViewHolder holder = new RM_TravelNoteAdapter.ViewHolder(view);
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 int position = holder.getAdapterPosition();
-                TravelNote travelNote = mTravelNoteList.get(position);
+                RM_TravelNote travelNote = mTravelNoteList.get(position);
                 Intent intent = new Intent(mContext, PointActivity.class);
-                intent.putExtra(TravelNoteActivity.TRAVELNOTE_NAME, travelNote.getName());
-                intent.putExtra(TravelNoteActivity.TRAVELNOTE_IMAGE_ID, travelNote.getImageId());
+                intent.putExtra(RM_TravelNoteActivity.TRAVELNOTE_NAME, travelNote.getName());
+                intent.putExtra(RM_TravelNoteActivity.TRAVELNOTE_IMAGE_ID, travelNote.getImageId());
                 mContext.startActivity(intent);
             }
         });
@@ -64,8 +64,8 @@ public class TravelNoteAdapter extends RecyclerView.Adapter<TravelNoteAdapter.Vi
     }
 
     @Override
-    public void onBindViewHolder(TravelNoteAdapter.ViewHolder holder, int position) {
-        TravelNote travelNote = mTravelNoteList.get(position);
+    public void onBindViewHolder(RM_TravelNoteAdapter.ViewHolder holder, int position) {
+        RM_TravelNote travelNote = mTravelNoteList.get(position);
         holder.travelnoteName.setText(travelNote.getName());
         Glide.with(mContext).load(travelNote.getImageId()).into(holder.travelnoteImage);
     }

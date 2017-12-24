@@ -20,7 +20,7 @@ import java.io.FileInputStream;
  * Created by Mason on 2017/12/19.
  */
 
-public class TravelNoteActivity extends AppCompatActivity{
+public class RM_TravelNoteActivity extends AppCompatActivity{
     public static final String TRAVELNOTE_NAME = "travelnote_name";
     public static final String TRAVELNOTE_IMAGE_ID = "travelnote_image_id";
 

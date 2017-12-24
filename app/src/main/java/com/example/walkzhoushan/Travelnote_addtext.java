@@ -8,7 +8,7 @@ import android.support.v7.app.AppCompatActivity;
  * Created by Mason on 2017/12/21.
  */
 
-public class Add_travelnote extends AppCompatActivity {
+public class Travelnote_addtext extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

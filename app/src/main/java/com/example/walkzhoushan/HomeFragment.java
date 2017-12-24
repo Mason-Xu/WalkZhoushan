@@ -66,7 +66,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.trailnote_img:
-                Intent intent1 = new Intent(getActivity(), TravelNotePageActivity.class);
+                Intent intent1 = new Intent(getActivity(), TravelNoteActivity2.class);
                 startActivity(intent1);
                 break;
             case R.id.spot_img:

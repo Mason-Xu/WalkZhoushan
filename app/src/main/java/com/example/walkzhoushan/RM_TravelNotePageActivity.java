@@ -3,7 +3,6 @@ package com.example.walkzhoushan;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBar;
@@ -23,17 +22,17 @@ import java.util.List;
  * Created by Mason on 2017/12/19.
  */
 
-public class TravelNotePageActivity extends AppCompatActivity {
+public class RM_TravelNotePageActivity extends AppCompatActivity {
 
     private DrawerLayout mDrawerLayout;
 
-    private TravelNote[] travelNotes = {new TravelNote("茶人谷", R.drawable.charengu), new TravelNote("东极岛", R.drawable.img_point_dongjidao),
-            new TravelNote("普陀山", R.drawable.img_point_putuoshan), new TravelNote("嵊泗", R.drawable.img_point_shengsi),
-            new TravelNote("桃花岛", R.drawable.img_point_taohuadao), new TravelNote("朱家尖", R.drawable.img_point_zhujiajian)};
+    private RM_TravelNote[] travelNotes = {new RM_TravelNote("茶人谷", R.drawable.charengu), new RM_TravelNote("东极岛", R.drawable.img_point_dongjidao),
+            new RM_TravelNote("普陀山", R.drawable.img_point_putuoshan), new RM_TravelNote("嵊泗", R.drawable.img_point_shengsi),
+            new RM_TravelNote("桃花岛", R.drawable.img_point_taohuadao), new RM_TravelNote("朱家尖", R.drawable.img_point_zhujiajian)};
 
-    private List<TravelNote> travelNoteList = new ArrayList<>();
+    private List<RM_TravelNote> travelNoteList = new ArrayList<>();
 
-    private TravelNoteAdapter adapter;
+    private RM_TravelNoteAdapter adapter;
 
     private SwipeRefreshLayout swipeRefresh;
 
@@ -57,18 +56,18 @@ public class TravelNotePageActivity extends AppCompatActivity {
 //                        .setAction("Undo", new View.OnClickListener() {
 //                            @Override
 //                            public void onClick(View v) {
-//                                Toast.makeText(TravelNotePageActivity.this, "Data plus?", Toast.LENGTH_SHORT).show();
+//                                Toast.makeText(RM_TravelNotePageActivity.this, "Data plus?", Toast.LENGTH_SHORT).show();
 //                            }
 //                        })
 //                        .show();
-                startActivity(new Intent(TravelNotePageActivity.this,Add_travelnote.class));
+                startActivity(new Intent(RM_TravelNotePageActivity.this,Travelnote_addtext.class));
             }
         });
         initTravelNotes();
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         GridLayoutManager layoutManager = new GridLayoutManager(this, 2);
         recyclerView.setLayoutManager(layoutManager);
-        adapter = new TravelNoteAdapter(travelNoteList);
+        adapter = new RM_TravelNoteAdapter(travelNoteList);
         recyclerView.setAdapter(adapter);
         swipeRefresh = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh);
         swipeRefresh.setColorSchemeResources(R.color.colorPrimary);
@@ -121,7 +120,7 @@ public class TravelNotePageActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                Intent intenthome = new Intent(TravelNotePageActivity.this,Bottombartest.class);
+                Intent intenthome = new Intent(RM_TravelNotePageActivity.this,Bottombartest.class);
                 startActivity(intenthome);
                 break;
             case R.id.search:
