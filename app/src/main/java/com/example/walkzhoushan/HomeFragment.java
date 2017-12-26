@@ -78,15 +78,15 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 startActivity(intent3);
                 break;
             case R.id.traffic_img:
-                Intent intent4 = new Intent(getActivity(), NoDevelop.class);
+                Intent intent4 = new Intent(getActivity(), Home_Traffic_activity.class);
                 startActivity(intent4);
                 break;
             case R.id.hotel_img:
-                Intent intent5 = new Intent(getActivity(), NoDevelop.class);
+                Intent intent5 = new Intent(getActivity(), Home_Hotel_activity.class);
                 startActivity(intent5);
                 break;
             case R.id.cate_img:
-                Intent intent6 = new Intent(getActivity(), NoDevelop.class);
+                Intent intent6 = new Intent(getActivity(),Home_Cate_activity.class);
                 startActivity(intent6);
                 break;
             case R.id.follow_img:

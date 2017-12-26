@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_marginBottom="56dp">
 
 
     <LinearLayout
@@ -19,6 +20,16 @@
                 android:layout_height="180dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/homepage_title_image" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="32dp"
+                android:layout_marginLeft="10dp"
+                android:text="舟山市 晴 8℃"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
 
             <TextView
                 android:id="@+id/homepage_travelnotes_text_view"
@@ -480,11 +491,78 @@
 
         </LinearLayout>
 
-        <ImageView
-            android:id="@+id/design"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/taohuadao" />
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/img_point_putuoshan"
+                    android:layout_margin="4dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="普陀山景点路线"
+                    android:layout_gravity="center"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/img_coupon_haixian"
+                    android:layout_margin="4dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="沈家门海鲜排挡"
+                    android:layout_gravity="center"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/img_point_shengsi"
+                    android:layout_margin="4dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="环游嵊泗岛"
+                    android:layout_gravity="center"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
 
 
     </LinearLayout>

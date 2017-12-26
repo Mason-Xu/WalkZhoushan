@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 /**
  * Created by Mason on 2017/12/12.
@@ -23,10 +25,13 @@ public class MineFragment extends Fragment implements View.OnClickListener {
     private Button button_history;
     private Button button_mynote;
     private Button button_setting;
+    private TextView phonenumber;
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_mine_page, container, false);
         //设置按钮点击事件
+        phonenumber = (TextView) view.findViewById(R.id.phonenumber_textview);
+        phonenumber.setText("13456");
         button_account = (Button) view.findViewById(R.id.button_account);
         button_phonenumber = (Button) view.findViewById(R.id.button_phonenumber);
         button_friend = (Button) view.findViewById(R.id.button_friend);

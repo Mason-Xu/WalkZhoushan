@@ -83,7 +83,7 @@
         android:layout_height="wrap_content">
 
         <CheckBox
-            android:id="@+id/register_checkbox"
+            android:id="@+id/register_checkbox_agree"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -124,7 +124,7 @@
             android:text="已有账号，点此" />
 
         <TextView
-            android:id="@+id/register_textview_join"
+            android:id="@+id/register_textview_sign"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="16dp"
