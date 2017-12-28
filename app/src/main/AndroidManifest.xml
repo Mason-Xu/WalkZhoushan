@@ -55,6 +55,7 @@
         <activity android:name=".AccountSetting" />
         <activity android:name=".Setting" />
         <activity android:name=".MyOrder" />
+        <activity android:name=".ChangePassword" />
 
         <!-- register point activity -->
         <activity android:name=".PointActivity" />

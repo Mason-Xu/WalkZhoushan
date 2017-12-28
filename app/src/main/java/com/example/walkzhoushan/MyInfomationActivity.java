@@ -8,20 +8,13 @@ import android.app.DatePickerDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.Calendar;
 
@@ -36,6 +29,7 @@ public class MyInfomationActivity extends BaseActivity implements View.OnClickLi
     private Button changename_button;
     private Button changebirth_button;
     private Button exitaccount_button;
+    private Button changepassword_button;
     private Button changesex_button;
     private TextView username_textview;
 
@@ -54,6 +48,7 @@ public class MyInfomationActivity extends BaseActivity implements View.OnClickLi
         changebirth_button = (Button) findViewById(R.id.changebirth_button);
         exitaccount_button = (Button) findViewById(R.id.exitaccount_button);
         changesex_button = (Button) findViewById(R.id.changesex_button);
+        changepassword_button = (Button) findViewById(R.id.changepassword_button);
 
 
         //get username from bmob and set text for username_textview
@@ -72,6 +67,40 @@ public class MyInfomationActivity extends BaseActivity implements View.OnClickLi
         changebirth_button.setOnClickListener(this);
         exitaccount_button.setOnClickListener(this);
         changesex_button.setOnClickListener(this);
+        changepassword_button.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.title_button_back:
+                onBackPressed();
+                break;
+            case R.id.changebirth_button:
+                Calendar ca = Calendar.getInstance();
+                final int mYear = ca.get(Calendar.YEAR);
+                final int mMonth = ca.get(Calendar.MONTH);
+                final int mDay = ca.get(Calendar.DAY_OF_MONTH);
+                //TODO 调用时间选择器
+                new DatePickerDialog(MyInfomationActivity.this, onDateSetListener, mYear, mMonth, mDay).show();
+                break;
+            case R.id.exitaccount_button:
+                CertainExit();
+                break;
+            case R.id.changesex_button:
+                changesex_textview = (TextView) findViewById(R.id.changesex_textview);
+                SexChooseDialog();
+                break;
+            case R.id.changename_button: // 设置昵称
+                onCreateNameDialog();
+                break;
+            case R.id.changepassword_button:
+                startActivity(new Intent(MyInfomationActivity.this,ChangePassword.class));
+                break;
+            default:
+                break;
+
+        }
     }
 
     /**
@@ -108,36 +137,6 @@ public class MyInfomationActivity extends BaseActivity implements View.OnClickLi
             tv_date.setText(days);
         }
     };
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.title_button_back:
-                onBackPressed();
-                break;
-            case R.id.changebirth_button:
-                Calendar ca = Calendar.getInstance();
-                final int mYear = ca.get(Calendar.YEAR);
-                final int mMonth = ca.get(Calendar.MONTH);
-                final int mDay = ca.get(Calendar.DAY_OF_MONTH);
-                //TODO 调用时间选择器
-                new DatePickerDialog(MyInfomationActivity.this, onDateSetListener, mYear, mMonth, mDay).show();
-                break;
-            case R.id.exitaccount_button:
-                CertainExit();
-                break;
-            case R.id.changesex_button:
-                changesex_textview = (TextView) findViewById(R.id.changesex_textview);
-                SexChooseDialog();
-                break;
-            case R.id.changename_button: // 设置昵称
-                onCreateNameDialog();
-                break;
-            default:
-                break;
-
-        }
-    }
 
     private void onCreateNameDialog() {
         // 使用LayoutInflater来加载dialog_setname.xml布局

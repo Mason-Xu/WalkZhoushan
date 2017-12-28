@@ -99,7 +99,7 @@ public class RegisterActivity extends BaseActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onBackPressed();
+                startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
             }
         });
         TextView login_text = (TextView)findViewById(R.id.register_textview_sign);

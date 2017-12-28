@@ -24,6 +24,10 @@ public class ForgetActivity extends BaseActivity implements View.OnClickListener
     private EditText et_authcode;
     private EditText et_password1;
     private EditText et_password2;
+    private String authcode;
+    private String phonenumber;
+    private String inputpassword;
+    private String confirmpassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,15 +44,6 @@ public class ForgetActivity extends BaseActivity implements View.OnClickListener
         et_password2 = (EditText) findViewById(R.id.forget_editext_confirmpassword);
 
         initView();
-        button_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ForgetActivity.this,LoginActivity.class);
-                startActivity(intent);
-            }
-        });
-
-
     }
 
     private void initView() {
@@ -61,7 +56,7 @@ public class ForgetActivity extends BaseActivity implements View.OnClickListener
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.title_button_back:
-                onBackPressed();
+                startActivity(new Intent(ForgetActivity.this,LoginActivity.class));
                 break;
             case R.id.forget_button_getauthcode:
                 sendAuthcode();
@@ -79,7 +74,7 @@ public class ForgetActivity extends BaseActivity implements View.OnClickListener
 
     private void sendAuthcode() {
         // 发送短信验证码
-        String phonenumber = et_phonenumber.getText().toString();
+        phonenumber = et_phonenumber.getText().toString();
         BmobSMS.requestSMSCode(phonenumber, "舟一走忘记密码验证码",new QueryListener<Integer>() {
 
             @Override
@@ -92,38 +87,28 @@ public class ForgetActivity extends BaseActivity implements View.OnClickListener
     }
 
     private void Commit() {
+        phonenumber = et_phonenumber.getText().toString();
+        authcode = et_authcode.getText().toString();
         //验证验证码和密码是否符合条件
-        BmobSMS.verifySmsCode("11位手机号码", "验证码", new UpdateListener() {
+        inputpassword=et_password1.getText().toString();
+        confirmpassword= et_password2.getText().toString();
+        if (inputpassword.equals(confirmpassword)){
+            BmobUser.resetPasswordBySMSCode(authcode,inputpassword, new UpdateListener() {
 
-            @Override
-            public void done(BmobException ex) {
-                if(ex==null){//短信验证码已验证成功
-                    Log.i("smile", "验证通过");
-                    String inputpassword=et_password1.getText().toString();
-                    String confirmpassword= et_password2.getText().toString();
-                    if (inputpassword.equals(confirmpassword)){
-                        BmobUser newUser = new BmobUser();
-                        newUser.setPassword(inputpassword);
-                        BmobUser bmobUser = BmobUser.getCurrentUser();
-                        newUser.update(bmobUser.getObjectId(),new UpdateListener() {
-                            @Override
-                            public void done(BmobException e) {
-                                if(e==null){
-                                    toast("更新密码成功");
-                                    startActivity(new Intent(ForgetActivity.this,LoginActivity.class));
-                                }else{
-                                    toast("更新用户信息失败:" + e.getMessage());
-                                }
-                            }
-                        });
-                    }else {
-                        toast("验证码不正确或密码两次不相同");
+                @Override
+                public void done(BmobException ex) {
+                    if(ex==null){
+                        Log.i("smile", "密码重置成功");
+                        toast("密码重置成功");
+                    }else{
+                        Log.i("smile", "重置失败：code ="+ex.getErrorCode()+",msg = "+ex.getLocalizedMessage());
+                        toast("获取有些不正确呢");
                     }
-                }else{
-                    Log.i("smile", "验证失败：code ="+ex.getErrorCode()+",msg = "+ex.getLocalizedMessage());
                 }
-            }
-        });
+            });
+        }else {
+            toast("验证码不正确或密码两次不相同");
+        }
 
 
     }
