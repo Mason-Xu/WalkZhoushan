@@ -13,25 +13,31 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Calendar;
 
-public class MyInfomationActivity extends AppCompatActivity implements View.OnClickListener {
+import cn.bmob.v3.BmobUser;
+
+public class MyInfomationActivity extends BaseActivity implements View.OnClickListener {
 
     private String[] sexArry = new String[] { "不告诉你","女", "男" };// 性别选择
 
     private Button title_button_back;
 
+    private Button changename_button;
     private Button changebirth_button;
     private Button exitaccount_button;
     private Button changesex_button;
+    private TextView username_textview;
 
 
     private TextView changesex_textview;
@@ -44,15 +50,25 @@ public class MyInfomationActivity extends AppCompatActivity implements View.OnCl
 
         title_button_back = (Button) findViewById(R.id.title_button_back);
 
+        changename_button = (Button) findViewById(R.id.changename_button);
         changebirth_button = (Button) findViewById(R.id.changebirth_button);
         exitaccount_button = (Button) findViewById(R.id.exitaccount_button);
         changesex_button = (Button) findViewById(R.id.changesex_button);
+
+
+        //get username from bmob and set text for username_textview
+        String username = (String) BmobUser.getObjectByKey("username");
+        username_textview = (TextView) findViewById(R.id.username_textview);
+        username_textview.setText(username);
+
+
         InitView();
     }
 
     private void InitView() {
         title_button_back.setOnClickListener(this);
 
+        changename_button.setOnClickListener(this);
         changebirth_button.setOnClickListener(this);
         exitaccount_button.setOnClickListener(this);
         changesex_button.setOnClickListener(this);
@@ -114,10 +130,52 @@ public class MyInfomationActivity extends AppCompatActivity implements View.OnCl
                 changesex_textview = (TextView) findViewById(R.id.changesex_textview);
                 SexChooseDialog();
                 break;
+            case R.id.changename_button: // 设置昵称
+                onCreateNameDialog();
+                break;
             default:
                 break;
 
         }
+    }
+
+    private void onCreateNameDialog() {
+        // 使用LayoutInflater来加载dialog_setname.xml布局
+        LayoutInflater layoutInflater = LayoutInflater.from(this);
+        View nameView = layoutInflater.inflate(R.layout.dialog_setname, null);
+
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                this);
+
+        // 使用setView()方法将布局显示到dialog
+        alertDialogBuilder.setView(nameView);
+
+        final EditText userInput = (EditText) nameView.findViewById(R.id.changename_edit);
+        final TextView name = (TextView) findViewById(R.id.changename_textview);
+
+
+        // 设置Dialog按钮
+        alertDialogBuilder
+                .setCancelable(false)
+                .setPositiveButton("OK",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                // 获取edittext的内容,显示到textview
+                                name.setText(userInput.getText());
+                            }
+                        })
+                .setNegativeButton("Cancel",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }
+                        });
+
+        // create alert dialog
+        AlertDialog alertDialog = alertDialogBuilder.create();
+
+        // show it
+        alertDialog.show();
     }
 
     private void CertainExit() {
@@ -126,12 +184,16 @@ public class MyInfomationActivity extends AppCompatActivity implements View.OnCl
         builder1.setMessage("确定退出账号?")
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        finish();
+                        BmobUser.logOut();   //清除缓存用户对象
+                        BmobUser currentUser = BmobUser.getCurrentUser(); // 现在的currentUser是null了;
+                        toast("退出账号成功");
+                        onBackPressed();
+
                     }
                 })
                 .setNegativeButton("No", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        // User cancelled the dialog
+                        toast("取消");
                     }
                 });
         // Create the AlertDialog object and return it

@@ -57,7 +57,7 @@ public class LoginActivity extends BaseActivity {
 
 
         // 以下是登录验证
-        Bmob.initialize(this, "cf99584b07eb1d6b3228af8fa110e524");
+
 
         username_edit = (EditText)findViewById(R.id.login_edittext_username);
         password_edit = (EditText)findViewById(R.id.login_edittext_password);

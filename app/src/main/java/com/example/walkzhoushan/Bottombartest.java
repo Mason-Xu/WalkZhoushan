@@ -17,6 +17,8 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
+import cn.bmob.v3.Bmob;
+
 public class Bottombartest extends AppCompatActivity {
 
     private HomeFragment fragment1;
@@ -67,6 +69,7 @@ public class Bottombartest extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bottom_bar);
+        Bmob.initialize(this, "cf99584b07eb1d6b3228af8fa110e524");
         frameLayout = (FrameLayout)findViewById(R.id.fragment_container);
         //添加 BottomNavigationView 的事件监听
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);

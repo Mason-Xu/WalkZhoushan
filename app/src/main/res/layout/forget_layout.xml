@@ -43,7 +43,7 @@
         android:orientation="horizontal">
 
         <EditText
-            android:id="@+id/forget_edittext_code"
+            android:id="@+id/forget_edittext_authcode"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -57,7 +57,7 @@
             android:paddingTop="12dp" />
 
         <Button
-            android:id="@+id/forget_button_getcode"
+            android:id="@+id/forget_button_getauthcode"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="6dp"
