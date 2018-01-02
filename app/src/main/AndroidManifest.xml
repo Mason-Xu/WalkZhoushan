@@ -92,6 +92,8 @@
 
         <activity android:name=".Mine_Coupon_Activity"/>
         <activity android:name=".MyInfomationActivity"/>
+        <activity android:name=".Mine_History"/>
+        <activity android:name=".Mine_MyTravelNote"/>
 
         <!--message register-->
         <activity android:name=".MsgActivity"/>

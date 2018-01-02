@@ -93,11 +93,11 @@ public class MineFragment extends Fragment implements View.OnClickListener {
                 startActivity(intent5);
                 break;
             case R.id.button_history:
-                Intent intent6 = new Intent(getActivity(), NoDevelop.class);
+                Intent intent6 = new Intent(getActivity(), Mine_History.class);
                 startActivity(intent6);
                 break;
             case R.id.button_mynote:
-                Intent intent7 = new Intent(getActivity(), NoDevelop.class);
+                Intent intent7 = new Intent(getActivity(), Mine_MyTravelNote.class);
                 startActivity(intent7);
                 break;
             case R.id.button_setting:
