@@ -98,7 +98,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 startActivity(intent8);
                 break;
             case R.id.needknow_img:
-                Intent intent9 = new Intent(getActivity(), ScrollingActivity.class);
+                Intent intent9 = new Intent(getActivity(), Needknow_ScrollingActivity.class);
                 startActivity(intent9);
                 break;
             case R.id.more_img:
@@ -106,7 +106,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 startActivity(intent10);
                 break;
             case R.id.homepage_putuo_button:
-                Intent intent11 = new Intent(getActivity(), NoDevelop.class);
+                Intent intent11 = new Intent(getActivity(), Point_putuoshan.class);
                 startActivity(intent11);
                 break;
 

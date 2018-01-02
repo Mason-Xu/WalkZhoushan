@@ -17,6 +17,7 @@ public class TravelNoteActivity2 extends AppCompatActivity implements View.OnCli
 
     private FloatingActionButton fab;
     private Button back;
+    private Button travelnote1;
 
 
     @Override
@@ -25,12 +26,14 @@ public class TravelNoteActivity2 extends AppCompatActivity implements View.OnCli
         setContentView(R.layout.home_travelnote_main);
         fab = (FloatingActionButton) findViewById(R.id.fab);
         back = (Button) findViewById(R.id.title_button_back);
+        travelnote1 = (Button) findViewById(R.id.button_travelnote1);
         initView();
     }
 
     private void initView() {
         fab.setOnClickListener(this);
         back.setOnClickListener(this);
+        travelnote1.setOnClickListener(this);
     }
 
     @Override
@@ -42,6 +45,8 @@ public class TravelNoteActivity2 extends AppCompatActivity implements View.OnCli
             case R.id.title_button_back:
                 onBackPressed();
                 break;
+            case R.id.button_travelnote1:
+                startActivity(new Intent(TravelNoteActivity2.this,Travelnote_Putuoshan.class));
             default:
                 break;
         }

@@ -130,7 +130,7 @@ public class WelcomeActivity extends AppCompatActivity {
     // 这里不用 prefManager.setFirstTimeLaunch(false); 到startpage再转变
     private void launchHomeScreen() {
         startActivity(new Intent(WelcomeActivity.this, StartPageActivity.class));
-        finish();
+//        finish();
     }
 
     //  viewpager change listener

@@ -37,7 +37,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Bottombartest"
+            android:name=".WelcomeActivity"
             android:label="@string/app_name_ch"
             >
             <intent-filter>
@@ -48,8 +48,8 @@
         </activity>
 
         <!-- <activity android:name=".WelcomeActivity" /> -->
-        <!--<activity android:name=".StartPageActivity" />-->
-        <!--<activity android:name=".Bottombartest" />-->
+        <activity android:name=".StartPageActivity" />
+        <activity android:name=".Bottombartest" />
         <activity android:name=".Mine_Friend" />
         <activity android:name=".NoDevelop" />
         <activity android:name=".AccountSetting" />
@@ -67,15 +67,17 @@
         <activity android:name=".Home_Traffic_activity"/>
         <activity android:name=".Home_Cate_activity"/>
         <activity android:name=".Home_Hotel_activity"/>
+        <activity android:name=".Point_putuoshan"/>
 
         <!-- register travelnote activity -->
         <activity android:name=".TravelNoteActivity2" />
         <activity android:name=".Travelnote_add"/>
         <activity android:name=".Travelnote_addtext"/>
+        <activity android:name=".Travelnote_Putuoshan"/>
 
 
         <activity
-            android:name=".ScrollingActivity"
+            android:name=".Needknow_ScrollingActivity"
             android:label="旅游须知" />
         <!--<activity-->
         <!--android:namLoginActivityMaterialDesignvity"-->

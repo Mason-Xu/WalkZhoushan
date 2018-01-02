@@ -17,7 +17,7 @@
                 android:layout_height="wrap_content">
 
                 <Button
-                    android:id="@+id/button_account"
+                    android:id="@+id/button_travelnote1"
                     android:layout_width="match_parent"
                     android:layout_height="160dp"
                     android:layout_alignParentLeft="true"
@@ -38,7 +38,7 @@
                     android:layout_gravity="center_vertical"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:src="@drawable/putuo"
+                    android:src="@drawable/pts"
                     android:scaleType="centerCrop"/>
 
                 <LinearLayout
@@ -54,7 +54,7 @@
                         android:layout_marginLeft="16dp"
                         android:layout_marginRight="16dp"
                         android:layout_marginTop="36dp"
-                        android:text="我在普陀山遇到超大鲨鱼" />
+                        android:text="宁波 - 舟山普陀之行" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -94,7 +94,7 @@
                 android:layout_height="wrap_content">
 
                 <Button
-                    android:id="@+id/button_account"
+                    android:id="@+id/button_travelnote2"
                     android:layout_width="match_parent"
                     android:layout_height="160dp"
                     android:layout_alignParentLeft="true"
@@ -115,7 +115,7 @@
                     android:layout_gravity="center_vertical"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:src="@drawable/putuo"
+                    android:src="@drawable/img_point_shengsi"
                     android:scaleType="centerCrop"/>
 
                 <LinearLayout
@@ -131,7 +131,7 @@
                         android:layout_marginLeft="16dp"
                         android:layout_marginRight="16dp"
                         android:layout_marginTop="36dp"
-                        android:text="我在普陀山遇到超大鲨鱼" />
+                        android:text="嵊泗海边大冲浪" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -143,7 +143,7 @@
                         <ImageView
                             android:layout_width="20dp"
                             android:layout_height="20dp"
-                            android:background="@drawable/user_img01" />
+                            android:background="@drawable/user_img02" />
 
                         <ImageView
                             android:layout_width="20dp"
@@ -153,7 +153,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="普陀山"/>
+                            android:text="嵊泗"/>
                     </LinearLayout>
                 </LinearLayout>
 
@@ -171,7 +171,7 @@
                 android:layout_height="wrap_content">
 
                 <Button
-                    android:id="@+id/button_account"
+                    android:id="@+id/button_travelnote3"
                     android:layout_width="match_parent"
                     android:layout_height="160dp"
                     android:layout_alignParentLeft="true"
@@ -192,7 +192,7 @@
                     android:layout_gravity="center_vertical"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:src="@drawable/putuo"
+                    android:src="@drawable/img_coupon_houseboat"
                     android:scaleType="centerCrop"/>
 
                 <LinearLayout
@@ -208,7 +208,7 @@
                         android:layout_marginLeft="16dp"
                         android:layout_marginRight="16dp"
                         android:layout_marginTop="36dp"
-                        android:text="我在普陀山遇到超大鲨鱼" />
+                        android:text="海上游轮大Party" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -220,7 +220,7 @@
                         <ImageView
                             android:layout_width="20dp"
                             android:layout_height="20dp"
-                            android:background="@drawable/user_img01" />
+                            android:background="@drawable/user_img04" />
 
                         <ImageView
                             android:layout_width="20dp"
@@ -230,7 +230,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="普陀山"/>
+                            android:text="桃花岛"/>
                     </LinearLayout>
                 </LinearLayout>
 
@@ -247,7 +247,7 @@
                 android:layout_height="wrap_content">
 
                 <Button
-                    android:id="@+id/button_account"
+                    android:id="@+id/button_travelnote4"
                     android:layout_width="match_parent"
                     android:layout_height="160dp"
                     android:layout_alignParentLeft="true"
@@ -268,7 +268,7 @@
                     android:layout_gravity="center_vertical"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:src="@drawable/putuo"
+                    android:src="@drawable/img_point_zhujiajian"
                     android:scaleType="centerCrop"/>
 
                 <LinearLayout
@@ -284,7 +284,7 @@
                         android:layout_marginLeft="16dp"
                         android:layout_marginRight="16dp"
                         android:layout_marginTop="36dp"
-                        android:text="我在普陀山遇到超大鲨鱼" />
+                        android:text="朱家尖爬上看日出" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -296,7 +296,7 @@
                         <ImageView
                             android:layout_width="20dp"
                             android:layout_height="20dp"
-                            android:background="@drawable/user_img01" />
+                            android:background="@drawable/user_img03" />
 
                         <ImageView
                             android:layout_width="20dp"
@@ -306,7 +306,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="普陀山"/>
+                            android:text="朱家尖"/>
                     </LinearLayout>
                 </LinearLayout>
 
@@ -323,7 +323,7 @@
                 android:layout_height="wrap_content">
 
                 <Button
-                    android:id="@+id/button_account"
+                    android:id="@+id/button_travelnote5"
                     android:layout_width="match_parent"
                     android:layout_height="160dp"
                     android:layout_alignParentLeft="true"
@@ -344,7 +344,7 @@
                     android:layout_gravity="center_vertical"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:src="@drawable/putuo"
+                    android:src="@drawable/taohuadao"
                     android:scaleType="centerCrop"/>
 
                 <LinearLayout
@@ -360,7 +360,7 @@
                         android:layout_marginLeft="16dp"
                         android:layout_marginRight="16dp"
                         android:layout_marginTop="36dp"
-                        android:text="我在普陀山遇到超大鲨鱼" />
+                        android:text="桃花岛看桃花" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -372,7 +372,7 @@
                         <ImageView
                             android:layout_width="20dp"
                             android:layout_height="20dp"
-                            android:background="@drawable/user_img01" />
+                            android:background="@drawable/user_img05" />
 
                         <ImageView
                             android:layout_width="20dp"
@@ -382,7 +382,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="普陀山"/>
+                            android:text="桃花岛"/>
                     </LinearLayout>
                 </LinearLayout>
 
@@ -399,7 +399,7 @@
                 android:layout_height="wrap_content">
 
                 <Button
-                    android:id="@+id/button_account"
+                    android:id="@+id/button_travelnote6"
                     android:layout_width="match_parent"
                     android:layout_height="160dp"
                     android:layout_alignParentLeft="true"
@@ -420,7 +420,7 @@
                     android:layout_gravity="center_vertical"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:src="@drawable/putuo"
+                    android:src="@drawable/charengu"
                     android:scaleType="centerCrop"/>
 
                 <LinearLayout
@@ -436,7 +436,7 @@
                         android:layout_marginLeft="16dp"
                         android:layout_marginRight="16dp"
                         android:layout_marginTop="36dp"
-                        android:text="我在普陀山遇到超大鲨鱼" />
+                        android:text="静寂的竹林,茶人谷" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -448,7 +448,7 @@
                         <ImageView
                             android:layout_width="20dp"
                             android:layout_height="20dp"
-                            android:background="@drawable/user_img01" />
+                            android:background="@drawable/user_img07" />
 
                         <ImageView
                             android:layout_width="20dp"
@@ -458,7 +458,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="普陀山"/>
+                            android:text="茶人谷"/>
                     </LinearLayout>
                 </LinearLayout>
 

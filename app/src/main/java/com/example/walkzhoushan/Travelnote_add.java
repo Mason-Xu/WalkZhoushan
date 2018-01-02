@@ -15,6 +15,7 @@ public class Travelnote_add extends AppCompatActivity implements View.OnClickLis
     private Button back;
     private Button travelnote_addtext1;
     private Button travelnote_addtext2;
+    private Button travelnote_addimg;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -24,6 +25,7 @@ public class Travelnote_add extends AppCompatActivity implements View.OnClickLis
         back = (Button) findViewById(R.id.title_button_back);
         travelnote_addtext1 = (Button) findViewById(R.id.add_text);
         travelnote_addtext2 = (Button) findViewById(R.id.add_travelnotetitle_next);
+        travelnote_addimg = (Button) findViewById(R.id.add_img);
         initView();
     }
 
@@ -31,6 +33,7 @@ public class Travelnote_add extends AppCompatActivity implements View.OnClickLis
         back.setOnClickListener(this);
         travelnote_addtext1.setOnClickListener(this);
         travelnote_addtext2.setOnClickListener(this);
+        travelnote_addimg.setOnClickListener(this);
     }
 
     @Override
@@ -43,8 +46,17 @@ public class Travelnote_add extends AppCompatActivity implements View.OnClickLis
             case R.id.add_travelnotetitle_next:
                 startActivity(new Intent(Travelnote_add.this, Travelnote_addtext.class));
                 break;
+            case R.id.add_img:
+                openAlbum();
             default:
                 break;
         }
+    }
+
+    private void openAlbum() {
+        Intent intent = new Intent();
+        intent.setType("image/*");
+        intent.setAction("android.intent.action.GET_CONTENT");
+        startActivityForResult(intent, 5002);
     }
 }

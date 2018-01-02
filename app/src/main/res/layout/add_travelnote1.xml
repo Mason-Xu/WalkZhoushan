@@ -116,6 +116,7 @@
             android:orientation="vertical">
 
             <Button
+                android:id="@+id/add_img"
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_gravity="center_horizontal"
