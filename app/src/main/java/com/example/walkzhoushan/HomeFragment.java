@@ -26,6 +26,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     private ImageView freewalk_img;
     private ImageView needknow_img;
     private ImageView more_img;
+    private ImageView strategy_putuoshan_img;
     private Button homepage_putuo_button;
 
     @Override
@@ -43,6 +44,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         freewalk_img = (ImageView) view.findViewById(R.id.freewalk_img);
         needknow_img = (ImageView) view.findViewById(R.id.needknow_img);
         more_img = (ImageView) view.findViewById(R.id.more_img);
+        strategy_putuoshan_img = (ImageView) view.findViewById(R.id.home_strategy_putuoshan_img);
         homepage_putuo_button = (Button) view.findViewById(R.id.homepage_putuo_button);
         InitView();
         return view;
@@ -59,6 +61,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         freewalk_img.setOnClickListener(this);
         more_img.setOnClickListener(this);
         needknow_img.setOnClickListener(this);
+        strategy_putuoshan_img.setOnClickListener(this);
         homepage_putuo_button.setOnClickListener(this);
 
     }
@@ -105,6 +108,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 Intent intent10 = new Intent(getActivity(), NoDevelop.class);
                 startActivity(intent10);
                 break;
+            case R.id.home_strategy_putuoshan_img:
+                startActivity(new Intent(getActivity(),Strategy_Pujisi.class));
             case R.id.homepage_putuo_button:
                 Intent intent11 = new Intent(getActivity(), Point_putuoshan.class);
                 startActivity(intent11);

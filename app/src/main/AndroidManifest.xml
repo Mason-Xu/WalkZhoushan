@@ -68,6 +68,7 @@
         <activity android:name=".Home_Cate_activity"/>
         <activity android:name=".Home_Hotel_activity"/>
         <activity android:name=".Point_putuoshan"/>
+        <activity android:name=".Strategy_Pujisi"/>
 
         <!-- register travelnote activity -->
         <activity android:name=".TravelNoteActivity2" />
