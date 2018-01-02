@@ -35,14 +35,6 @@ public class Home_Traffic_activity extends AppCompatActivity {
 
     protected void goToLink() {
         layout_base_web = (LinearLayout) findViewById(R.id.layout_traffic_web);
-//        findViewById(R.id.img_cancel)
-//                .setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View view) {
-//                        BaofooPayUtil util = new BaofooPayUtil(MainActivity.this);
-//                        util.toPay("52efc346db35d3fe7ae26dbe31193a5a", "white", "1");
-//                    }
-//                });
         preAgentWeb = AgentWeb.with(this)
                 .setAgentWebParent(layout_base_web, new LinearLayout.LayoutParams(-1, -1))//传入AgentWeb 的父控件 ，如果父控件为 RelativeLayout ， 那么第二参数需要传入 RelativeLayout.LayoutParams ,第一个参数和第二个参数应该对应。
                 .useDefaultIndicator()// 使用默认进度条
