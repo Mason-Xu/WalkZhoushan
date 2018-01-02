@@ -18,6 +18,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import cn.bmob.v3.Bmob;
+
 /**
  * app引导欢迎界面代码
  * Created by Mason on 2017/12/14.
@@ -36,6 +38,8 @@ public class WelcomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Bmob.initialize(this, "cf99584b07eb1d6b3228af8fa110e524"); // 初始化 Bmobsdk
 
         // 判断是否第一次启动- before calling setContentView()
         prefManager = new PrefManager(this);

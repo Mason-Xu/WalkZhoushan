@@ -18,9 +18,9 @@ public class Strategy_Pujisi extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.point_putuoshan);
+        setContentView(R.layout.strategy_pujisi);
         back = (Button)findViewById(R.id.title_button_back);
-        pujisi_web = (WebView) findViewById(R.id.coupon_pujisi_web);
+        pujisi_web = (WebView) findViewById(R.id.strategy_pujisi_web);
         pujisi_web.getSettings().setJavaScriptEnabled(true);
         pujisi_web.setWebViewClient(new WebViewClient());
         pujisi_web.loadUrl("http://bmob-cdn-16053.b0.upaiyun.com/2018/01/01/c419572d40a3a4ec8080f505925ddb22.html");

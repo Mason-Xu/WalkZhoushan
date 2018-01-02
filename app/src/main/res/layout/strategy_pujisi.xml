@@ -17,8 +17,6 @@
             android:background="@drawable/title_back"  />
 
         <ImageView
-
-
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:background="@drawable/pujisi"
@@ -26,7 +24,7 @@
     </FrameLayout>
 
     <WebView
-        android:id="@+id/coupon_pujisi_web"
+        android:id="@+id/strategy_pujisi_web"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="8dp"/>
