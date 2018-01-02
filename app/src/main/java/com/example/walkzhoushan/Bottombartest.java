@@ -19,7 +19,7 @@ import android.widget.Toast;
 
 import cn.bmob.v3.Bmob;
 
-public class Bottombartest extends AppCompatActivity {
+public class Bottombartest extends BaseActivityFinishAllActivity {
 
     private HomeFragment fragment1;
     private MessageFragment fragment2;
