@@ -49,11 +49,11 @@ public class PointPageActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Data deleted", Snackbar.LENGTH_SHORT)
+                Snackbar.make(view, "添加景点介绍?", Snackbar.LENGTH_SHORT)
                         .setAction("Undo", new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                Toast.makeText(PointPageActivity.this, "Data plus?", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(PointPageActivity.this, "此功能还未完善", Toast.LENGTH_SHORT).show();
                             }
                         })
                         .show();

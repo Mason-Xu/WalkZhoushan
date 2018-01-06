@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 /**
  * Created by Mason on 2017/12/12.
@@ -29,6 +30,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     private ImageView strategy_putuoshan_img;
     private Button homepage_putuo_button;
 
+    private TextView watchallpoint_textview,watchallstrategy_textview;
+
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
@@ -46,6 +49,9 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         more_img = (ImageView) view.findViewById(R.id.more_img);
         strategy_putuoshan_img = (ImageView) view.findViewById(R.id.home_strategy_pujisi_img);
         homepage_putuo_button = (Button) view.findViewById(R.id.homepage_putuo_button);
+        watchallpoint_textview = (TextView)view.findViewById(R.id.watchallpoint_textview);
+        watchallstrategy_textview = (TextView)view.findViewById(R.id.watchallstrategy_textview);
+
         InitView();
         return view;
     }
@@ -63,6 +69,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         needknow_img.setOnClickListener(this);
         strategy_putuoshan_img.setOnClickListener(this);
         homepage_putuo_button.setOnClickListener(this);
+        watchallpoint_textview.setClickable(true);
+        watchallstrategy_textview.setClickable(true);
+        watchallpoint_textview.setOnClickListener(this);
+        watchallstrategy_textview.setOnClickListener(this);
 
     }
     @Override
@@ -76,9 +86,15 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 Intent intent2 = new Intent(getActivity(), PointPageActivity.class);
                 startActivity(intent2);
                 break;
+            case R.id.watchallpoint_textview:
+                startActivity(new Intent(getActivity(), PointPageActivity.class));
+                break;
             case R.id.strategy_img:
                 Intent intent3 = new Intent(getActivity(), NoDevelop.class);
                 startActivity(intent3);
+                break;
+            case R.id.watchallstrategy_textview:
+                startActivity(new Intent(getActivity(), NoDevelop.class));
                 break;
             case R.id.traffic_img:
                 Intent intent4 = new Intent(getActivity(), Home_Traffic_activity.class);
