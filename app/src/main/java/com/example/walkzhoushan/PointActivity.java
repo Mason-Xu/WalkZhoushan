@@ -47,7 +47,7 @@ public class PointActivity extends AppCompatActivity {
         collapsingToolbar.setTitle(pointName);
         Glide.with(this).load(pointImageId).into(pointImageView);
         String pointContent = generatePointContent(pointName);
-        if(!TextUtils.isEmpty(pointContent)){
+        if (!TextUtils.isEmpty(pointContent)) {
             pointContentText.setText(pointContent);
         }
 
@@ -58,29 +58,22 @@ public class PointActivity extends AppCompatActivity {
         FileInputStream in = null;
         BufferedReader reader = null;
         StringBuilder pointContent = new StringBuilder();
-//        try {
-//            in = openFileInput("putuoshan_text");
-//            reader = new BufferedReader(new InputStreamReader(in));
-//            String line = "";
-//            while ((line = reader.readLine()) != null) {
-//                pointContent.append(line);
-//            }
-//            Toast.makeText(this, "you read over", Toast.LENGTH_SHORT).show();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        } finally {
-//            if (reader != null) {
-//                try {
-//                    reader.close();
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        }
-        for (int  i = 0;i<10000;i++){
-
-            pointContent.append(pointName);
+        if (pointName.equals("普陀山")) {
+            pointContent.append(this.getString(R.string.putuoshan_text));
+        } else if (pointName.equals("茶人谷")) {
+            pointContent.append(this.getString(R.string.charengu_text));
+        } else if (pointName.equals("东极岛")) {
+            pointContent.append(this.getString(R.string.dongjidao_text));
+        } else if (pointName.equals("桃花岛")) {
+            pointContent.append(this.getString(R.string.taohuadao_text));
+        } else if (pointName.equals("嵊泗")) {
+            pointContent.append(this.getString(R.string.shengsidao_text));
+        } else if (pointName.equals("朱家尖")) {
+            pointContent.append(this.getString(R.string.zhujiajian_text));
+        }else{
+            pointContent.append("没有此景点介绍");
         }
+
 
         return pointContent.toString();
     }

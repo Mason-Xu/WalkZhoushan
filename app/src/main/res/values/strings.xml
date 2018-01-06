@@ -20,9 +20,29 @@
     <string name="start">GOT IT</string>
 
 
-    <string name="普陀山介绍">普陀山位于舟山群岛东部海域，隶属浙江省舟山市，与山西五台山、四川峨眉山、安徽九华山并称为“中国佛教四大名山”。 每逢农历二月十九、六月十九、九月十九分别是观音菩萨诞辰、出家、得道三大香会期，全山人山人海，寺院香烟缭绕，一派海天佛国景象。普陀山四面环海，风光旖旎，幽幻独特，被誉为“第一人间清净地”。山石林木、寺塔崖刻、梵音涛声，皆充满佛国神秘色彩。岛上树木丰茂，古樟遍野，鸟语花香，素有“海岛植物园”之称。</string>
 
+    <string name="title_activity_login">Sign in</string>
+    <string name="app_name_ch">舟一走</string>
 
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+    <string name="putuoshan_text">普陀山位于舟山群岛东部海域，隶属浙江省舟山市，与山西五台山、四川峨眉山、安徽九华山并称为“中国佛教四大名山”。 每逢农历二月十九、六月十九、九月十九分别是观音菩萨诞辰、出家、得道三大香会期，全山人山人海，寺院香烟缭绕，一派海天佛国景象。普陀山四面环海，风光旖旎，幽幻独特，被誉为“第一人间清净地”。山石林木、寺塔崖刻、梵音涛声，皆充满佛国神秘色彩。岛上树木丰茂，古樟遍野，鸟语花香，素有“海岛植物园”之称。</string>
+    <string name="charengu_text">茶人谷卧双桥镇狭门水库之上，境内大潭岗，号东海第四峰，岗上植茶千亩，谷因名之。山高、谷邃、溪长、瀑飞、林幽、岩危，乃茶人谷六奇之景。春鸟鸣涧、夏荫滩林、秋枫染霜、冬梅点雪、枕流栖石、随云逍遥，实茶人谷六游之美。茶人谷生态旅游区是灰天鹅、白鹭、獐、梅花鹿们的栖息地，溪里爬满石蟹、小鱼和小虾，还是濒临灭绝物种娃娃鱼生长繁育的天堂。进入幽深的谷内，高耸的山峰、陡峭的石壁、清凉的气候，构成了一人美丽的原始生态区。茶人谷的美食同样也很诱人，令人回味无穷。 茶人谷景美，茶人谷的茶同样醉人心怀。山上1000多亩的茶园，注册为“海天香”佛茶，2006年被农业部评为无公害产品，该茶园是全市唯一被列入省级高效生态农业示范基地的茶园。</string>
+    <string name="dongjidao_text">舟山群岛最东侧的岛屿之一，距沈家门渔港约45公里，是舟山群岛中海山风光和渔家风情最典型的岛屿。 东极不仅有浓厚、古朴的渔家特色，更有美不胜收的风光，它几乎包揽了真正意义上的阳光、碧海、岛礁、海味，这里海面一年四季变化有常，静胜杭州西湖，一马平川；怒比钱塘秋潮，惊涛裂岸，每年春、夏，岛顶上云雾飘绕，而海岸边却是阳光普照，蔚为奇观。 东极主要风景有庙子湖、青浜岛、 东福山，黄兴岛。 东极岛既有碧海奇石的美称，还有那美丽动人的传说故事。世传秦时的徐福率三千童男童女下东海为秦始皇求长生不老之药，驻足地便是东福山。近、现代的文人墨客也各领风骚，为东极留下了许多传世佳句，更为东极积淀了浓厚的文化底蕴。</string>
+    <string name="shengsidao_text">嵊泗县是浙江省最东部、舟山群岛最北部的海岛县，一处国家级列岛风景名胜区。 嵊泗列岛风景区是以“碧海奇石，金沙渔火”为主要景观特色，有泗礁、花绿、嵊山、洋山4个景区。融海洋文化与海岛民俗风情为一体，以观光游览、休闲度假和科教活动为主要功能的列岛型国家重点风景名胜区。 嵊泗海域广阔，岛屿密布，有沙滩、海礁、奇洞、悬崖、险峰等自然景观。嵊泗列岛属亚热带海洋性季风气候，冬无严寒，夏无酷暑。姝丽迷人、独具魅力，素有“海上仙山”之称，是旅游、观光、度假、休闲、海钓、尝购海鲜和海上动动的理想场所</string>
+    <string name="taohuadao_text">桃花岛位于浙江省舟山群岛东南部，是舟山群岛的第七大岛。金庸先生笔下的“东邪”黄药师就住在这个岛上。现为国家4A级景区。 岛上的旅游资源丰富多样，门类齐全，品位较高，集海、山、石、礁、岩、洞、寺、庙、庵、花、林、鸟、军事遗迹、历史纪念地、摩崖石刻、神话传说于一体，自然景观与人文景观并茂。 桃花岛拥有舟山群岛第一高峰——安期峰；舟山第一深港——桃花港；东南沿海第一大石——大佛岩；素有“海岛植物园”美称。</string>
+    <string name="zhujiajian_text">朱家尖位于浙江省舟山群岛东南部，为中国华东地区最有活力的海滨旅游胜地之一。 朱家尖是中国国际沙雕故乡，以沙石自然景观著称，集沙景、石景、海景、佛景于一体，是理想的海滨观光、度假、休闲、避暑胜地。被誉为“国家海岛生态公园”。 岛上风光秀丽迷人，境内华东地区最大的沙滩群－十里金沙、千岩竞秀的观音文化苑（白山）、“青山醉雾”之称的大青山、景色极为壮观的乌石塘（樟州湾）及回归自然的浪漫之岛－情人岛等都无不散发着海岛诱人的魅力。</string>
     <string name="needkonw_text">
 1、检查鞋子类型，鞋底是否太松或受到磨损。遵守警告标识，如“小心：地湿易滑”。如果摔倒了:\n
 保持四肢与地面平行。 \n
@@ -104,21 +124,5 @@
 短信求援：用手机发短信求救比打电话要好，因为打电话会分心，降低对现场环境突变的应变力，而且可能被匪徒听到声音而刺激起反应。当然也可以先在手机上输入当地求救热线电话号码。手机最好放在衣服或裤子口袋里，方便求援。\n
 
     </string>
-    <string name="title_activity_login">Sign in</string>
-    <string name="app_name_ch">舟一走</string>
-
-    <!-- Strings related to login -->
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password (optional)</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="error_invalid_email">This email address is invalid</string>
-    <string name="error_invalid_password">This password is too short</string>
-    <string name="error_incorrect_password">This password is incorrect</string>
-    <string name="error_field_required">This field is required</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email
-        completions."
-    </string>
-
 
 </resources>
