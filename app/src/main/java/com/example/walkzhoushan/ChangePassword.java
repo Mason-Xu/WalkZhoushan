@@ -21,6 +21,7 @@ public class ChangePassword extends BaseActivity implements View.OnClickListener
     private EditText et_oldpassword;
     private EditText et_newpassword1;
     private EditText et_newpassword2;
+    private String oldpassword,newpassword1,newpassword2,remote_password;
 
 
     @Override
@@ -60,31 +61,25 @@ public class ChangePassword extends BaseActivity implements View.OnClickListener
     }
 
     private void CertainPassword() {  // 更新密码 方法,用到Bmob后端云
-        String  oldpassword = et_oldpassword.getText().toString();
-        String  newpassword1 = et_newpassword1.getText().toString();
-        String  newpassword2 = et_newpassword2.getText().toString();
-        String remote_password = (String) BmobUser.getObjectByKey("password");
-        if(oldpassword.equals(remote_password)){
-            if (newpassword1.equals(newpassword2)){
-                BmobUser newUser = new BmobUser();
-                newUser.setPassword(newpassword1);
-                BmobUser bmobUser = BmobUser.getCurrentUser();
-                newUser.update(bmobUser.getObjectId(),new UpdateListener() {
-                    @Override
-                    public void done(BmobException e) {
-                        if(e==null){
-                            toast("更新密码成功");
-                            onBackPressed();
-                        }else{
-                            toast("更新密码失败:" + e.getMessage());
-                        }
+        oldpassword = et_oldpassword.getText().toString();
+        newpassword1 = et_newpassword1.getText().toString();
+        newpassword2 = et_newpassword2.getText().toString();
+        if (newpassword1.equals(newpassword2)){
+
+            BmobUser.updateCurrentUserPassword(oldpassword, newpassword1, new UpdateListener() {
+
+                @Override
+                public void done(BmobException e) {
+                    if(e==null){
+                        toast("密码修改成功，可以用新密码进行登录啦");
+                    }else{
+                        toast("失败:" + e.getMessage());
                     }
-                });
-            }else{
-                toast("两次输入密码不一致");
-            }
+                }
+
+            });
         }else{
-            toast("旧密码不对");
+            toast("两次密码不正确");
         }
     }
 }
