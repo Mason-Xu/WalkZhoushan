@@ -90,7 +90,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 startActivity(new Intent(getActivity(), PointPageActivity.class));
                 break;
             case R.id.strategy_img:
-                Intent intent3 = new Intent(getActivity(), NoDevelop.class);
+                Intent intent3 = new Intent(getActivity(), Home_Strategy.class);
                 startActivity(intent3);
                 break;
             case R.id.watchallstrategy_textview:
