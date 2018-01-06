@@ -21,5 +21,10 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <string name="help">如需帮助 或 发现本程序的 Bug ,请发邮件至 zhouyizou1234@163.com .\n \n
+    感谢你的陪伴! 我们团队会把App做的越来越好 (◍•ᴗ•◍) </string>
+    <string name="about">\t我们团队的五个人都非常喜欢旅游，自从来到舟山上大学之后，就想着去走遍舟山的各大旅游景点，但因时常有课，舟山旅游景点众多，且分布较广，跟团游需要花费许多时间，费用很高，所以选择跟团游有诸多不便。为了便于大家在空余的时间能高效的在舟山旅游，所以我们就有了制作舟一走这个app的想法  \n\n
+    \t因是初次进行app的制作，欢迎大家在反馈栏多多提供建议，我们会在后期进行维护与改进\n\n
+    该app最终解释权归“舟一走”工作小组所有</string>
 
 </resources>

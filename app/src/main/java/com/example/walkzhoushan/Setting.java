@@ -20,7 +20,7 @@ public class Setting extends BaseActivityFinishAllActivity implements View.OnCli
     private Button back;
     private Button qqLink;
     private Button weChatLink;
-    private Button helpLink;
+    private Button help;
     private Button about;
 
     @Override
@@ -30,6 +30,8 @@ public class Setting extends BaseActivityFinishAllActivity implements View.OnCli
 
         back = (Button) findViewById(R.id.title_button_back);
         exit = (Button) findViewById(R.id.exitapp_button);
+        help = (Button) findViewById(R.id.help_button);
+        about = (Button) findViewById(R.id.aboutus_button);
 
         initView();
 
@@ -38,6 +40,8 @@ public class Setting extends BaseActivityFinishAllActivity implements View.OnCli
     private void initView() {
         back.setOnClickListener(this);
         exit.setOnClickListener(this);
+        help.setOnClickListener(this);
+        about.setOnClickListener(this);
     }
 
     @Override
@@ -62,6 +66,12 @@ public class Setting extends BaseActivityFinishAllActivity implements View.OnCli
                         });
                 // Create the AlertDialog object and return it
                 builder.show();
+                break;
+            case R.id.aboutus_button:
+                startActivity(new Intent(Setting.this,Setting_about.class));
+                break;
+            case R.id.help_button:
+                startActivity(new Intent(Setting.this,Settng_help.class));
                 break;
             default:
                 break;

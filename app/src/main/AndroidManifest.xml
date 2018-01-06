@@ -93,6 +93,8 @@
         <activity android:name=".MyInfomationActivity"/>
         <activity android:name=".Mine_History"/>
         <activity android:name=".Mine_MyTravelNote"/>
+        <activity android:name=".Settng_help"/>
+        <activity android:name=".Setting_about"/>
 
         <!--message register-->
         <activity android:name=".MsgActivity"/>
