@@ -75,6 +75,7 @@ public class Travelnote_add extends AppCompatActivity implements View.OnClickLis
                             public void onClick(View v) {
                                 Toast.makeText(Travelnote_add.this, "此功能还未完善", Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(Travelnote_add.this, TravelNoteActivity2.class));
+                                finish();
                             }
                         })
                         .show();
