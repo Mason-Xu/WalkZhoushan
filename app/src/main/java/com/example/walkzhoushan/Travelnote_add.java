@@ -63,7 +63,7 @@ public class Travelnote_add extends AppCompatActivity implements View.OnClickLis
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.title_button_back:
-                startActivity(new Intent(Travelnote_add.this, TravelNoteActivity2.class));
+                onBackPressed();
                 break;
             case R.id.add_text:
                 startActivity(new Intent(Travelnote_add.this, Travelnote_addtext.class));
